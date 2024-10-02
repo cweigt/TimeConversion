@@ -1,11 +1,11 @@
 h1 {
     text-align: center;
     display: block;
-    margin-top: 130px;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 90%;
     border: 5px solid black;
+    padding-left: 10px;
 }
 
 .center {
@@ -19,19 +19,51 @@ h1 {
     padding-top: 20px;
 }
 
+.leftC {
+    text-align: left;
+    display: block;
+    width: 90%;
+    margin-top: 10px;
+    border: 5px solid black;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+
+.rightC {
+    align-self: right;
+    text-align: left;
+    display: block;
+    width: 90%;
+    margin-top: 10px;
+    border: 5px solid black;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
 .background {
-    background-image: url(https://wallpapers.com/images/hd/code-letters-screen-blur-multi-colored-ziipneu0gjb09aqz.jpg);
+    background-color: lightblue;
 }
 
 .column {
-    padding: 10px;
-    display: block;
-}
-
-.left, .right {
     flex: 1;
 }
 
-.middle {
-    flex: 2;
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inline-elements {
+    display: flex;
+    align-items: center;
+}
+
+/*.inline-elements label: This selects all <label> elements that are descendants of an element 
+with the class inline-elements.
+.inline-elements p: This selects all <p> (paragraph) elements that are descendants of an element 
+with the class inline-elements.*/
+.inline-elements label, .inline-elements p {
+    margin-right: 5px;
 }
