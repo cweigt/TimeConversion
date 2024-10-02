@@ -1,9 +1,37 @@
 h1 {
     text-align: center;
+    display: block;
+    margin-top: 130px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
 }
 
 .center {
     text-align: center;
-    border: 10px darkblue;
-    background-color: aqua;
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 5px solid black;
+    padding-top: 20px;
+}
+
+.background {
+    background-image: url(https://wallpapers.com/images/hd/code-letters-screen-blur-multi-colored-ziipneu0gjb09aqz.jpg);
+}
+
+.column {
+    padding: 10px;
+    display: block;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.middle {
+    flex: 2;
 }
