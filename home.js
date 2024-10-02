@@ -17,7 +17,7 @@ function executeTime(){
         }
     }
 
-    document.getElementById("militaryTime").innerText = `Military Time: ${hour < 10 ? "0" + hour : hour}:${minute < 10 ? "0" + minute : minute}`;
+    document.getElementById("militaryTime").innerText = `Military Time: ${militaryClock < 10 ? "0" + militaryClock : militaryClock}:${minute < 10 ? "0" + minute : minute}`;
 
     //calculate remaining time and display
     const remHours = 23 - militaryClock;
