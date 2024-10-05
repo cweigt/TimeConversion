@@ -54,3 +54,9 @@ function ReadMinute(){
 function ReadMeridiem(){
     return document.getElementById("meridiem").value;
 }
+
+function DateCheck() {
+    const yearInput = document.getElementById("year");
+    const monthInput = document.getElementById("month");
+    const dayInput = document.getElementById("day");
+}
