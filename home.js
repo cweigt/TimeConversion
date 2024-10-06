@@ -24,6 +24,8 @@ function executeTime(){
     const remMinutes = 60 - minute;
 
     document.getElementById("remTime").innerText = `${remHours} hours, ${remMinutes} minutes.`;
+
+    DateCheck();
 }
 
 
@@ -56,7 +58,51 @@ function ReadMeridiem(){
 }
 
 function DateCheck() {
-    const yearInput = document.getElementById("year");
-    const monthInput = document.getElementById("month");
-    const dayInput = document.getElementById("day");
+    let month = ReadMonth();
+    let day = ReadDay();
+    const yearInput = document.getElementById("year").value;
+
+    const year = parseInt(yearInput, 10);
+
+    //days in each month Janauary to December
+    const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let currentDays;
+
+    //need to set currentDays to the amount of days that are provided in the month
+    for(let i = 0; i < daysInMonth.length; i++){
+        if(month == i) {
+            currentDays = daysInMonth[i-1];
+        }
+    }
+
+    document.getElementById("date").innerText = `${month} ${currentDays}`;
 }
+
+//function to read the month
+function ReadMonth(){
+    const monthInput = document.getElementById("month").value;
+    //checking to see if month is valid
+    const month = parseInt(monthInput, 10);
+
+    if(month >= 0 && month <= 12){
+        return month;
+    }else {
+        alert("Invalid month. Type in a month from 1-12");
+        return null;
+    }
+}
+
+//function to read the days
+function ReadDay(){
+    const dayInput = document.getElementById("day").value;
+    //checking to see if day is valid
+    const day = parseInt(dayInput, 10);
+
+    if(day >= 0 && day <= 12){
+        return day;
+    }else {
+        alert("Invalid day. Please type in a day that is within the proper range for the month.");
+        return null;
+    }
+}
+
