@@ -4,7 +4,7 @@ export function DateCheck() {
     const yearInput = document.getElementById("year").value;
     const year = parseInt(yearInput, 10);
 
-    document.getElementById("date").innerText = `${month}/${day}/${year}`
+    document.getElementById("date").innerText = `${month < 10 ? "0" + month : month}/${day}/${year}`
 
 }
 
