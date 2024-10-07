@@ -1,6 +1,6 @@
 import * as DC from './dateCheck.js';
 
-function executeTime(){
+export function executeTime(){
     const hour = ReadHour();
     const minute = ReadMinute();
     const meridiem = ReadMeridiem();
@@ -59,6 +59,9 @@ function ReadMinute(){
 function ReadMeridiem(){
     return document.getElementById("meridiem").value;
 }
+
+//for the convert button
+document.getElementById("convert").addEventListener("click", executeTime);
 
 
 
