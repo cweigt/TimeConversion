@@ -3,7 +3,7 @@ export function DateCheck() {
     let day = ReadDay();
     let year = ReadYear();
 
-    document.getElementById("date").innerText = `${month < 10 ? "0" + month : month}/${day}/${year}`
+    document.getElementById("date").innerText = `${month < 10 ? "0" + month : month}/${day < 10 ? "0" + day : day}/${year}`
 
 }
 
