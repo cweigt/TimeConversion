@@ -1,4 +1,5 @@
 import * as DC from './dateCheck.js';
+import * as REG from './regions.js';
 
 export function executeTime(){
     const hour = ReadHour();
@@ -28,11 +29,13 @@ export function executeTime(){
     document.getElementById("remTime").innerText = `${remHours} hours, ${remMinutes} minutes.`;
 
     DC.DateCheck();
+    REG.ChangeTime();
 
+    
 }
 
 
-function ReadHour(){
+export function ReadHour(){
     const hourInput = document.getElementById("hour").value;
     const hour = parseInt(hourInput, 10);
 
@@ -44,7 +47,7 @@ function ReadHour(){
     }
 }
 
-function ReadMinute(){
+export function ReadMinute(){
     const minuteInput = document.getElementById("minute").value;
     const minute = parseInt(minuteInput, 10);
 
@@ -56,11 +59,11 @@ function ReadMinute(){
     }
 }
 
-function ReadMeridiem(){
+export function ReadMeridiem(){
     return document.getElementById("meridiem").value;
 }
 
-//for the convert button
+//for the convert button, calls the main function when button is clicked
 document.getElementById("convert").addEventListener("click", executeTime);
 
 
