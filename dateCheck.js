@@ -1,15 +1,14 @@
 export function DateCheck() {
     let month = ReadMonth();
     let day = ReadDay();
-    const yearInput = document.getElementById("year").value;
-    const year = parseInt(yearInput, 10);
+    let year = ReadYear();
 
     document.getElementById("date").innerText = `${month < 10 ? "0" + month : month}/${day}/${year}`
 
 }
 
 //function to read the month
-function ReadMonth(){
+export function ReadMonth(){
     const monthInput = document.getElementById("month").value;
     //checking to see if month is valid
     const month = parseInt(monthInput, 10);
@@ -23,7 +22,7 @@ function ReadMonth(){
 }
 
 //function to read the days
-function ReadDay(){
+export function ReadDay(){
     const month = ReadMonth();
     const dayInput = document.getElementById("day").value;
     const day = parseInt(dayInput, 10);
@@ -45,5 +44,10 @@ function ReadDay(){
         alert(`Invalid day for selected month. Type a day between 1 and ${currentDays}.`);
         return null;
     }
+}
 
+export function ReadYear(){
+    const yearInput = document.getElementById("year").value;
+    const year = parseInt(yearInput, 10);
+    return year;
 }
