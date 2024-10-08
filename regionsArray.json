@@ -1,0 +1,6 @@
+{ 
+    "regions": [
+        {"zone":"New York City, NY", "timeChange":1},
+        {"zone":"Los Angeles, CA", "timeChange":-2}
+    ]
+}
