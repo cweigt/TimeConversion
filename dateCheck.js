@@ -33,6 +33,7 @@ export function ReadDay(){
     const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     let currentDays;
     //need to set currentDays to the amount of days that are provided in the month
+    //can't do december at all for some reason, between 1 and 'undefined'
     for(let i = 0; i < daysInMonth.length; i++){
         if(month == i) {
             currentDays = daysInMonth[i-1];
