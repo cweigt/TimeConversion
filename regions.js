@@ -1,4 +1,5 @@
 import data from './regionsArray.json' with {type: 'json'};
+console.log("imported: " + data);
 
 export function ChangeTime() {
    // Get the current time and date values
@@ -10,14 +11,13 @@ export function ChangeTime() {
    const day = ReadDate.ReadDay();
    const year = ReadDate.ReadYear();
 
-
    // Loop through the regions data and update the time for each region
    for (let tracker = 0; tracker < data.regions.length; tracker++) {
       let time = data.regions[tracker];
       let updatedHour = hour + time.timeChange;
       
       // Use region from JSON
-      let region = time.region; 
+      let region = time.zone; 
       document.getElementById(region).innerText = `${time.zone}: ${updatedHour}`;
       // Update the respective region's time
    }
