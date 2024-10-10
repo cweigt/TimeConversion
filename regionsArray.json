@@ -1,10 +1,8 @@
-{
-    "_comment": "region is primary key",
-    
+{   
     "regions": [
-      {"zone": "Eastern Time", "timeChange": 1, "region": "NewYorkCityNY"},
-      {"zone": "Hawaii-Aleutian Time", "timeChange": -5, "region": "HonoluluHI"},
-      {"zone": "Pacific Time", "timeChange": -2, "region": "LosAngelesCA"}
+      {"zone": "NewYorkCityNY", "timeChange": 1},
+      {"zone": "HonoluluHI", "timeChange": -5},
+      {"zone": "LosAngelesCA", "timeChange": -2}
     ]
   }
   
