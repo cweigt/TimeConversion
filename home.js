@@ -7,7 +7,7 @@ export function executeTime(){
     const meridiem = ReadMeridiem();
 
     //print standard time
-    document.getElementById("standardTime").innerText = `Standard Time: ${hour}:${minute < 10 ? "0" + minute : minute} ${meridiem}`;
+    document.getElementById("standardTime").innerText = `Standard Time: ${hour}:${(minute < 10) ? "0" + minute : minute} ${meridiem}`;
 
     let militaryClock = hour;
     if(meridiem === "AM"){ //between 1am and 11am
@@ -20,7 +20,7 @@ export function executeTime(){
         }
     }
 
-    document.getElementById("militaryTime").innerText = `Military Time: ${militaryClock < 10 ? "0" + militaryClock : militaryClock}:${minute < 10 ? "0" + minute : minute}`;
+    document.getElementById("militaryTime").innerText = `Military Time: ${(militaryClock < 10) ? "0" + militaryClock : militaryClock}:${(minute < 10) ? "0" + minute : minute}`;
 
     //calculate remaining time and display
     const remHours = 23 - militaryClock;
