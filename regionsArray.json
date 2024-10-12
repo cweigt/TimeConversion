@@ -1,8 +1,7 @@
-{   
-    "regions": [
-      {"zone": "NewYorkCityNY", "timeChange": 1},
-      {"zone": "HonoluluHI", "timeChange": -5},
-      {"zone": "LosAngelesCA", "timeChange": -2}
-    ]
-  }
-  
+{
+  "regions": [
+    {"id": "NewYorkCityNY", "zone": "Eastern Time", "timeChange": 1},
+    {"id": "HonoluluHI", "zone": "Hawaii-Aleutian Time", "timeChange": -5},
+    {"id": "LosAngelesCA", "zone": "Pacific Time", "timeChange": -2}
+  ]
+}
