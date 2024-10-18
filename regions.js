@@ -32,7 +32,7 @@ export function ChangeTime() {
       }
 
       // Use the 'region' field from the JSON file
-      let region = time.region; 
+      let region = time.id; 
       document.getElementById(region).innerText = `${time.zone}: ${updatedHour}:${minute.toString().padStart(2, '0')} ${meridiem}`;
    }
 }
