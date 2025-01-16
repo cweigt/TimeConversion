@@ -31,15 +31,20 @@ export function ReadDay(){
 
     //days in each month Janauary to December
     const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    let currentDays;
+
+    if(month === 0 || month < 1 || month > 12){
+        return null; //this is an invalid month
+    }
+    let currentDays = daysInMonth[month - 1];
+    //month - 1 to adjust with the index
     //need to set currentDays to the amount of days that are provided in the month
-    //can't do december at all for some reason, between 1 and 'undefined'
+
     for(let i = 0; i < daysInMonth.length; i++){
         if(month == i) {
             currentDays = daysInMonth[i-1];
         }
     }
-    if(day <= currentDays){
+    if(day >= 1 && day <= currentDays){
         return day;
     }else{
         alert(`Invalid day for selected month. Type a day between 1 and ${currentDays}.`);
@@ -47,6 +52,7 @@ export function ReadDay(){
     }
 }
 
+//these functions might be needed for th year rollover discovered in december
 export function ReadYear(){
     const yearInput = document.getElementById("year").value;
     const year = parseInt(yearInput, 10);
