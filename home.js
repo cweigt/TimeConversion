@@ -6,9 +6,6 @@ export function executeTime(){
     const minute = ReadMinute();
     const meridiem = ReadMeridiem();
 
-    //print standard time
-    document.getElementById("standardTime").innerText = `Standard Time: ${hour}:${(minute < 10) ? "0" + minute : minute} ${meridiem}`;
-
     let militaryClock = hour;
     if(meridiem === "AM"){ //between 1am and 11am
         if(hour == 12){
