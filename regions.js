@@ -9,6 +9,7 @@ export function ChangeTime() {
    const minute = ReadTime.ReadMinute(); 
    const hour = ReadTime.ReadHour();
    const originalMeridiem = ReadTime.ReadMeridiem(); // Store the original meridiem
+   //console.log(`Updating region: ${region}`);
 
    const month = ReadDate.ReadMonth();
    const day = ReadDate.ReadDay();
@@ -23,16 +24,39 @@ export function ChangeTime() {
       // Adjust for time zones that cross midnight in a 12-hour format
       if (updatedHour >= 12) {
          if (updatedHour > 12) {
-            updatedHour -= 12;
+             updatedHour -= 12;
          }
-         meridiem = (meridiem === 'AM') ? 'PM' : 'AM';
-      } else if (updatedHour <= 0) {
+         // Only flip meridiem if the original hour was before or after 12
+         if (hour < 12) { // Means we crossed into PM
+             meridiem = 'PM';
+         }
+     } 
+     else if (updatedHour <= 0) {
          updatedHour += 12;
          meridiem = (meridiem === 'AM') ? 'PM' : 'AM';
-      }
-
-      // Use the 'region' field from the JSON file
+     }
+ 
+     // Explicitly setting 12 PM case
+     if (updatedHour === 12 && hour < 12) {
+         meridiem = 'PM';
+     }
+     if (updatedHour === 12 && hour >= 12) {
+         meridiem = 'AM';
+     }
+ 
+      // Use the 'id' field from the JSON file
       let region = time.id; 
       document.getElementById(region).innerText = `${time.zone}: ${updatedHour}:${minute.toString().padStart(2, '0')} ${meridiem}`;
+
+
+     /* 
+      let region = time.id;
+      let regionElement = document.getElementById(region);
+
+      if (regionElement) {
+         regionElement.innerText = `${time.zone}: ${updatedHour}:${minute.toString().padStart(2, '0')} ${meridiem}`;
+     } else {
+         console.log(`Error: Element with ID ${region} not found.`);
+     }*/
    }
 }
