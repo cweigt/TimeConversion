@@ -9,7 +9,7 @@
     {"id": "ChicagoIL", "zone": "Central Time", "timeChangeHour": 0.0, "timeChangeMinute": 0},
     {"id": "NewYorkCityNY", "zone": "Eastern Time", "timeChangeHour": 1.0, "timeChangeMinute": 0},
     {"id": "SanJuanPR", "zone": "Atlantic Standard Time", "timeChangeHour": 2.0, "timeChangeMinute": 0},
-    {"id": "Newfoundland", "zone": "Newfoundland Standard Time", "timeChangeHour": 2, "timeChangeMinute": 30},
+    {"id": "Newfoundland", "zone": "Newfoundland Standard Time", "timeChangeHour": 2.0, "timeChangeMinute": 30.0},
     {"id": "SauPaulo", "zone": "Brasilia Time", "timeChangeHour": 3.0, "timeChangeMinute": 0},
     {"id": "SouthGeorgia", "zone": "South Georgia Time", "timeChangeHour": 4.0, "timeChangeMinute": 0},
     {"id": "LondonUK", "zone": "Greenwich Mean Time", "timeChangeHour": 6.0, "timeChangeMinute": 0},
