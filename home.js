@@ -44,7 +44,7 @@ export function ReadHour(){
     }
 }
 
-export function ReadMinute(){
+export const ReadMinute = () => {
     const minuteInput = document.getElementById("minute").value;
     const minute = parseInt(minuteInput, 10);
 
